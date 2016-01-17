@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="test.dao.RoleRelatedResourceMapper" >
+  <resultMap id="BaseResultMap" type="test.model.RoleRelatedResource" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="ROLEID" property="roleid" jdbcType="VARCHAR" />
+    <result column="RESOURCEID" property="resourceid" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_sc_sys_role_related_resource
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="test.model.RoleRelatedResource" >
+    insert into t_sc_sys_role_related_resource (ID, ROLEID, RESOURCEID
+      )
+    values (#{id,jdbcType=VARCHAR}, #{roleid,jdbcType=VARCHAR}, #{resourceid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="test.model.RoleRelatedResource" >
+    update t_sc_sys_role_related_resource
+    set ROLEID = #{roleid,jdbcType=VARCHAR},
+      RESOURCEID = #{resourceid,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select ID, ROLEID, RESOURCEID
+    from t_sc_sys_role_related_resource
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, ROLEID, RESOURCEID
+    from t_sc_sys_role_related_resource
+  </select>
+</mapper>

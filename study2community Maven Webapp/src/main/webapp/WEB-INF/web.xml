@@ -5,11 +5,20 @@
     version="3.0">
     
   <display-name>Archetype Created Web Application</display-name>
-  <!-- Spring配置文件 -->  
+  <!-- Spring监听器
+   <listener>  
+       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
+   </listener> -->  
+   <!-- 防止Spring内存溢出监听器
+   <listener>  
+       <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
+   </listener> -->    
+  <!-- Spring配置文件 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring-framework4.2.3.xml</param-value>
+    <param-value>classpath:spring-framework4.2.4.xml</param-value>
   </context-param>
+  
   <!-- Mybatis配置文件
   <context-param>
     <param-name>contextConfigLocation</param-name>
@@ -17,7 +26,7 @@
   </context-param>
    -->
    
-    <!-- 编码过滤器 -->  
+    <!-- 编码过滤器
     <filter>
         <filter-name>encodingFilter</filter-name>  
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
@@ -30,32 +39,24 @@
     <filter-mapping>  
         <filter-name>encodingFilter</filter-name>  
         <url-pattern>/*</url-pattern>  
-    </filter-mapping>
-    <!-- Spring监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
-    </listener>  
-    <!-- 防止Spring内存溢出监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
-    </listener>  
-  
-    <!-- Spring MVC servlet -->  
+    </filter-mapping> -->  
+    
+    <!-- Spring MVC servlet
     <servlet>  
         <servlet-name>SpringMVC</servlet-name>  
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
         <init-param>  
             <param-name>contextConfigLocation</param-name>  
-            <param-value>classpath:spring-mvc.xml</param-value>  
+            <param-value>classpath:spring-mvc4.2.4.xml</param-value>  
         </init-param>
         <load-on-startup>1</load-on-startup>  
         <async-supported>true</async-supported>  
-    </servlet>  
+    </servlet> -->
+    <!-- 此处可以可以配置成*.do，对应struts的后缀习惯
     <servlet-mapping>  
         <servlet-name>SpringMVC</servlet-name>  
-        <!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
         <url-pattern>/</url-pattern>
-    </servlet-mapping>  
+    </servlet-mapping> -->  
     <welcome-file-list>  
         <welcome-file>/index.jsp</welcome-file>  
     </welcome-file-list>

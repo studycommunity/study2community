@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="test.dao.UserAuthorizationMapper" >
+  <resultMap id="BaseResultMap" type="test.model.UserAuthorization" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="IDENTIFY" property="identify" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL" property="credential" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_sc_sys_user_authorization
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="test.model.UserAuthorization" >
+    insert into t_sc_sys_user_authorization (ID, USERID, TYPE, 
+      IDENTIFY, CREDENTIAL)
+    values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{identify,jdbcType=VARCHAR}, #{credential,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="test.model.UserAuthorization" >
+    update t_sc_sys_user_authorization
+    set USERID = #{userid,jdbcType=VARCHAR},
+      TYPE = #{type,jdbcType=VARCHAR},
+      IDENTIFY = #{identify,jdbcType=VARCHAR},
+      CREDENTIAL = #{credential,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select ID, USERID, TYPE, IDENTIFY, CREDENTIAL
+    from t_sc_sys_user_authorization
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, USERID, TYPE, IDENTIFY, CREDENTIAL
+    from t_sc_sys_user_authorization
+  </select>
+</mapper>

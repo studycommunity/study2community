@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="test.dao.SettingsMapper" >
+  <resultMap id="BaseResultMap" type="test.model.Settings" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_sc_sys_settings
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="test.model.Settings" >
+    insert into t_sc_sys_settings (ID)
+    values (#{id,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID
+    from t_sc_sys_settings
+  </select>
+</mapper>

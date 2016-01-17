@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="test.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="test.model.User" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="ROLEID" property="roleid" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="QUSETION" property="qusetion" jdbcType="VARCHAR" />
+    <result column="ANWSER" property="anwser" jdbcType="VARCHAR" />
+    <result column="USERGROUPID" property="usergroupid" jdbcType="VARCHAR" />
+    <result column="REGISTERTIME" property="registertime" jdbcType="VARCHAR" />
+    <result column="REGISTERIP" property="registerip" jdbcType="VARCHAR" />
+    <result column="LOGINTIME" property="logintime" jdbcType="VARCHAR" />
+    <result column="LOGINIP" property="loginip" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ISONLINE" property="isonline" jdbcType="VARCHAR" />
+    <result column="ISENABLED" property="isenabled" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_sc_sys_user
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="test.model.User" >
+    insert into t_sc_sys_user (ID, ROLEID, USERNAME, 
+      PHONE, EMAIL, QUSETION, 
+      ANWSER, USERGROUPID, REGISTERTIME, 
+      REGISTERIP, LOGINTIME, LOGINIP, 
+      STATUS, ISONLINE, ISENABLED
+      )
+    values (#{id,jdbcType=VARCHAR}, #{roleid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{qusetion,jdbcType=VARCHAR}, 
+      #{anwser,jdbcType=VARCHAR}, #{usergroupid,jdbcType=VARCHAR}, #{registertime,jdbcType=VARCHAR}, 
+      #{registerip,jdbcType=VARCHAR}, #{logintime,jdbcType=VARCHAR}, #{loginip,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{isonline,jdbcType=VARCHAR}, #{isenabled,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="test.model.User" >
+    update t_sc_sys_user
+    set ROLEID = #{roleid,jdbcType=VARCHAR},
+      USERNAME = #{username,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      QUSETION = #{qusetion,jdbcType=VARCHAR},
+      ANWSER = #{anwser,jdbcType=VARCHAR},
+      USERGROUPID = #{usergroupid,jdbcType=VARCHAR},
+      REGISTERTIME = #{registertime,jdbcType=VARCHAR},
+      REGISTERIP = #{registerip,jdbcType=VARCHAR},
+      LOGINTIME = #{logintime,jdbcType=VARCHAR},
+      LOGINIP = #{loginip,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      ISONLINE = #{isonline,jdbcType=VARCHAR},
+      ISENABLED = #{isenabled,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select ID, ROLEID, USERNAME, PHONE, EMAIL, QUSETION, ANWSER, USERGROUPID, REGISTERTIME, 
+    REGISTERIP, LOGINTIME, LOGINIP, STATUS, ISONLINE, ISENABLED
+    from t_sc_sys_user
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, ROLEID, USERNAME, PHONE, EMAIL, QUSETION, ANWSER, USERGROUPID, REGISTERTIME, 
+    REGISTERIP, LOGINTIME, LOGINIP, STATUS, ISONLINE, ISENABLED
+    from t_sc_sys_user
+  </select>
+</mapper>

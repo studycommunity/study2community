@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE generatorConfiguration    
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"    
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"> 
+<generatorConfiguration>
+	<!---<properties/>外部属性-->
+	<classPathEntry  location="mysql-connector-java-5.1.30.jar"/><!-- 数据库驱动-->
+	<context id="MySQL" defaultModelType="flat" targetRuntime="MyBatis3Simple"><!--<context id="Mysql" defaultModelType="flat" targetRuntime="MyBatis3">-->
+		<property name="beginningDelimiter" value="`"/>
+		<property name="endingDelimiter" value="`"/>
+		<commentGenerator>
+				<property name="suppressDate" value="true"/>
+				<property name="suppressAllComments" value="true"/> <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://outer2studycommunity.mysql.rds.aliyuncs.com:3306/studycommunity" userId="sc" password="studycommunity">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"/>    
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.application.model" targetProject="src"><!-- 生成模型的包名和位置-->
+			<property name="enableSubPackages" value="true"/>
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="test.mapping" targetProject="src"><!-- 生成映射的包名和位置-->
+			<property name="enableSubPackages" value="true"/>
+		</sqlMapGenerator> 
+		<javaClientGenerator type="SPRING" targetPackage="test.dao" targetProject="src"><!-- 生成dao的包名和位置-->  
+			<property name="enableSubPackages" value="true"/>    
+		</javaClientGenerator>
+		
+		<!-- 表 tableName表名或视图名 domainObjectName实体类名-->
+		<table schema="studycommunity" tableName="t_sc_sys_resource" domainObjectName="Resource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_role" domainObjectName="Role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_role_related_resource" domainObjectName="RoleRelatedResource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_settings" domainObjectName="Settings" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_user" domainObjectName="User" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_user_authorization" domainObjectName="UserAuthorization" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_user_group" domainObjectName="UserGroup" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_user_group_related_role" domainObjectName="UserGroupRelatedRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+		<table schema="studycommunity" tableName="t_sc_sys_user_related_role" domainObjectName="UserRelatedRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+		</table>
+    </context>    
+</generatorConfiguration>    

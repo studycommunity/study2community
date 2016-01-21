@@ -5,19 +5,21 @@
     version="3.0">
     
   <display-name>Archetype Created Web Application</display-name>
-  <!-- Spring监听器
+  <!-- Spring监听器 -->  
    <listener>  
        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
-   </listener> -->  
-   <!-- 防止Spring内存溢出监听器
-   <listener>  
-       <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
-   </listener> -->    
-  <!-- Spring配置文件 -->
-  <context-param>
+   </listener>
+   <!-- Spring配置文件 -->
+   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring-framework4.2.4.xml</param-value>
   </context-param>
+   <!-- 防止Spring内存溢出监听器
+   <listener>  
+       <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
+   </listener> -->
+  
+  
   
   <!-- Mybatis配置文件
   <context-param>

@@ -9,11 +9,13 @@
 <!-- bootstrap include -->
 <%@include file="common/bootstrap3.3.6.jsp" %>
 </head>
-<body>
-    <div class="container">
+<body style='background-image: url("${ basePath}/images/login_background.png")'>
+    <div class="container" >
         <form action="" method="post" class="form-signin" role="form">
-            <h2 class="text-center form-header">用户登录</h2>
-            <div class="form-group">
+			<div class="media-middle">
+				<a href="#"> <img class="media-object" src="${ basePath}/images/logo.png" alt="..."></a>
+			</div>
+			<div class="form-group">
                 <input type="email" class="form-control" name="email" placeholder="邮箱" required autofocus />
             </div>
             <div class="form-group">

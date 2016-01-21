@@ -24,15 +24,12 @@
       <!-- scope表示开发时引入，发布时不会加载此包 -->  
       <scope>test</scope>
     </dependency>
-    
     <!-- spring framework
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
         <version>${spring.version}</version>
-    </dependency>
-    -->
-    
+    </dependency>-->
     <!-- spring核心包 -->
     <dependency>
         <groupId>org.springframework</groupId>  

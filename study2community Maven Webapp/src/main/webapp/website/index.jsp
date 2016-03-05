@@ -10,6 +10,7 @@
 <%@include file="../jsp/common/bootstrap3.3.6.jsp" %>
 </head>
 <body>
+	<div class="page">
 	<!-- 导航栏 -->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
 		<div class="circle-shadow">
@@ -130,7 +131,7 @@
 	<main>
 		<section id="banner" data-parallax-speed="-0.4" data-parallax-offset="30" class="parallax">
 			<div class="parallax-back" style="transform: translate3d(0px, 248.4px, 0px);">
-				<img src="${ basePath}/images/website/background01.jpg" ">
+				<img src="${ basePath}/images/website/background01.jpg" >
 			</div>
 			<div class="container parallax-base">
 				<div class="showoff mdl-shadow--16dp">
@@ -454,6 +455,6 @@
 		</section>-->
 	</main>
 	 
-
+</div>
 </body>
 </html>

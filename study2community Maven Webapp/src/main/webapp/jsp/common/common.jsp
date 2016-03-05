@@ -5,3 +5,6 @@
 	pageContext.setAttribute("path",path);
 	pageContext.setAttribute("basePath",basePath);
 %>
+<link href="${basePath}/jsp/common/css/common.css" rel="stylesheet">
+<link href="${basePath}/jsp/common/css/style.css" rel="stylesheet">
+<link href="${basePath}/jsp/common/css/components.css" rel="stylesheet">

@@ -123,7 +123,7 @@
 				data-parallax-offset="30" class="parallax">
 				<div class="parallax-back"
 					style="transform: translate3d(0px, 88.8px, 0px);">
-					<img src="img/parallax02.jpg">
+					<img src="${ basePath}/images/website/parallax02.jpg" >
 				</div>
 				<div class="container parallax-base">
 					<div class="showoff mdl-shadow--16dp">
@@ -272,8 +272,7 @@
 					<div class="row row-balance">
 						<div class="col-xs-12 col-sm-4">
 							<div class="feat">
-								<a href="/features/#social-login" class="pic"><img
-									src="${ basePath}/images/website/login.png" ></a>
+								<a href="/features/#social-login" class="pic"><img src="${ basePath}/images/website/login.png" ></a>
 								<h4>
 									<a href="/features/#social-login">SocialAll Login</a>
 								</h4>
@@ -281,8 +280,7 @@
 						</div>
 						<div class="col-xs-12 col-sm-4">
 							<div class="feat">
-								<a href="/features/#social-inviter" class="pic"><img
-									src="img/invite.png"></a>
+								<a href="/features/#social-inviter" class="pic"><img src="${ basePath}/images/website/invite.png" ></a>
 								<h4>
 									<a href="/features/#social-inviter">SocialAll Inviter</a>
 								</h4>
@@ -290,8 +288,7 @@
 						</div>
 						<div class="col-xs-12 col-sm-4">
 							<div class="feat">
-								<a href="/features/#social-publishing" class="pic"><img
-									src="img/posting.png"></a>
+								<a href="/features/#social-publishing" class="pic"><img src="${ basePath}/images/website/posting.png" ></a>
 								<h4>
 									<a href="/features/#social-publishing">SocialAll Publishing</a>
 								</h4>
@@ -301,9 +298,7 @@
 				</div>
 			</section>
 			<section id="faq" class="parallax">
-				<div class="parallax-back">
-					<img src="img/parallax01.jpg">
-				</div>
+				<div class="parallax-back"><img src="${ basePath}/images/website/parallax01.jpg" ></div>
 				<div class="parallax-base container">
 					<h1 class="text-center">FAQs</h1>
 					<div class="row qas-list">
@@ -436,7 +431,7 @@
 								of users and the number of requests over time.</p>
 						</div>
 						<div class="col-xs-12 col-sm-4">
-							<img src="img/aboutus.png">
+							<img src="${ basePath}/images/website/aboutus.png" >
 						</div>
 					</div>
 				</div>
@@ -483,22 +478,19 @@
 				</div>
 			</div>
 		</footer>
-		<script
-			src="//cdnjs.cloudflare.com/ajax/libs/device.js/0.2.7/device.min.js"></script>
-		<script
-			src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script
-			src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
-		<script
-			src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<!-- 
+		<script src="//cdnjs.cloudflare.com/ajax/libs/device.js/0.2.7/device.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="/js/script.js"></script>
-		<meta name="viewport"
-			content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
 		<script src="/js/jquery.rd-parallax.js"></script>
 		<script src="/js/trmix.min.js"></script>
 		<script src="/js/JVFloat/jvfloat.min.js"></script>
+		 
 		<script>
 			$('[data-toggle="tooltip"]').tooltip();
 			$(
@@ -559,5 +551,6 @@
 			}
 		})(document);/* ]]> */
 	</script>
+	-->
 </body>
 </html>
